@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Shared
+
 
 @main
 struct WWYSApp: App {

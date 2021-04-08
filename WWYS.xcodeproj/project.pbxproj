@@ -7,16 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A1D572A261F090100A2A30F /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1D5729261F090100A2A30F /* Shared.framework */; };
+		3A1D572B261F090100A2A30F /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1D5729261F090100A2A30F /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3AA16A142609E29A0084546C /* WWYSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA16A132609E29A0084546C /* WWYSApp.swift */; };
-		3AA16A162609E29A0084546C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA16A152609E29A0084546C /* ContentView.swift */; };
 		3AA16A182609E29A0084546C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA16A172609E29A0084546C /* Assets.xcassets */; };
 		3AA16A1B2609E29A0084546C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA16A1A2609E29A0084546C /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3A1D572C261F090100A2A30F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3A1D572B261F090100A2A30F /* Shared.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3A1D5729261F090100A2A30F /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA16A102609E29A0084546C /* WWYS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWYS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA16A132609E29A0084546C /* WWYSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWYSApp.swift; sourceTree = "<group>"; };
-		3AA16A152609E29A0084546C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3AA16A172609E29A0084546C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AA16A1A2609E29A0084546C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3AA16A1C2609E29A0084546C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,17 +42,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A1D572A261F090100A2A30F /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A1D56FE261EF6BD00A2A30F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A1D5729261F090100A2A30F /* Shared.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3AA16A072609E29A0084546C = {
 			isa = PBXGroup;
 			children = (
-				3AA16A122609E29A0084546C /* WWYS */,
+				3AA16A122609E29A0084546C /* App */,
 				3AA16A112609E29A0084546C /* Products */,
+				3A1D56FE261EF6BD00A2A30F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,16 +74,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3AA16A122609E29A0084546C /* WWYS */ = {
+		3AA16A122609E29A0084546C /* App */ = {
 			isa = PBXGroup;
 			children = (
 				3AA16A132609E29A0084546C /* WWYSApp.swift */,
-				3AA16A152609E29A0084546C /* ContentView.swift */,
 				3AA16A172609E29A0084546C /* Assets.xcassets */,
 				3AA16A1C2609E29A0084546C /* Info.plist */,
 				3AA16A192609E29A0084546C /* Preview Content */,
 			);
-			path = WWYS;
+			path = App;
 			sourceTree = "<group>";
 		};
 		3AA16A192609E29A0084546C /* Preview Content */ = {
@@ -79,6 +103,7 @@
 				3AA16A0C2609E29A0084546C /* Sources */,
 				3AA16A0D2609E29A0084546C /* Frameworks */,
 				3AA16A0E2609E29A0084546C /* Resources */,
+				3A1D572C261F090100A2A30F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,7 +163,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AA16A162609E29A0084546C /* ContentView.swift in Sources */,
 				3AA16A142609E29A0084546C /* WWYSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +221,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -252,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -268,11 +292,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"WWYS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
 				DEVELOPMENT_TEAM = KR9D699PKJ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = WWYS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -290,11 +314,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"WWYS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
 				DEVELOPMENT_TEAM = KR9D699PKJ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = WWYS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
