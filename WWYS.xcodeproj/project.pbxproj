@@ -52,9 +52,7 @@
 		3AA16A122609E29A0084546C /* App */ = {
 			isa = PBXGroup;
 			children = (
-				3AA16A132609E29A0084546C /* WWYSApp.swift */,
-				3AA16A172609E29A0084546C /* Assets.xcassets */,
-				3AA16A1C2609E29A0084546C /* Info.plist */,
+				3AEED36B262037EB00CBA458 /* iOS */,
 				3AA16A192609E29A0084546C /* Preview Content */,
 			);
 			path = App;
@@ -66,6 +64,16 @@
 				3AA16A1A2609E29A0084546C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3AEED36B262037EB00CBA458 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3AA16A132609E29A0084546C /* WWYSApp.swift */,
+				3AA16A172609E29A0084546C /* Assets.xcassets */,
+				3AA16A1C2609E29A0084546C /* Info.plist */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +280,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
 				DEVELOPMENT_TEAM = KR9D699PKJ;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/App/iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -294,7 +302,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
 				DEVELOPMENT_TEAM = KR9D699PKJ;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/App/iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
