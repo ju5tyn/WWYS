@@ -1,16 +1,20 @@
 import SwiftUI
 import Combine
 
-struct ContentView: View {
+public struct ContentView: View {
     
-    @ObservedObject var viewModel = ViewModel()
+    public init(viewModel: QuoteViewModel) {
+        self.viewModel = viewModel
+    }
+    
+    @ObservedObject var viewModel = QuoteViewModel()
 
-    var body: some View {
+    public var body: some View {
         NavigationView {
             LazyVStack {
                 HStack {
                     Spacer(minLength: 10)
-                    if let quote = viewModel.result?.textContent{
+                    if let quote = viewModel.result?.quote{
                         SpeechBubbleView(text: quote)
                     }
                     Button(action: {self.viewModel.getResult()}) {
@@ -32,7 +36,7 @@ struct ContentView: View {
                     .colorInvert()
                     
                 }
-                .myButtonStyle()
+                .primaryButtonStyle()
             Spacer(minLength: 300)
             }
             
@@ -45,7 +49,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView()
+            ContentView(viewModel: QuoteViewModel())
                 .previewDevice("iPhone 11 Pro")
                 
         }

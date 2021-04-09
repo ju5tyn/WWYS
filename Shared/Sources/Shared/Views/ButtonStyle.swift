@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MyButtonStyle: ButtonStyle {
+struct Style: ButtonStyle {
     
     var mainColor: Color
     var secondaryColor: Color
@@ -25,11 +25,11 @@ struct MyButtonStyle: ButtonStyle {
 
 
 extension Button {
-    func myButtonStyle() -> some View {
-        self.buttonStyle(MyButtonStyle(mainColor: .primary, secondaryColor: .secondary))
+    func primaryButtonStyle() -> some View {
+        self.buttonStyle(Style(mainColor: .primary, secondaryColor: .secondary))
     }
     
     func yeButtonStyle() -> some View {
-        self.buttonStyle(MyButtonStyle(mainColor: .clear, secondaryColor: .clear))
+        self.buttonStyle(Style(mainColor: .clear, secondaryColor: .clear))
     }
 }

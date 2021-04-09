@@ -3,33 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A1D572A261F090100A2A30F /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1D5729261F090100A2A30F /* Shared.framework */; };
-		3A1D572B261F090100A2A30F /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1D5729261F090100A2A30F /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3A86445D261F3C2B00879CB7 /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = 3A86445C261F3C2B00879CB7 /* Shared */; };
 		3AA16A142609E29A0084546C /* WWYSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA16A132609E29A0084546C /* WWYSApp.swift */; };
 		3AA16A182609E29A0084546C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA16A172609E29A0084546C /* Assets.xcassets */; };
 		3AA16A1B2609E29A0084546C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA16A1A2609E29A0084546C /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		3A1D572C261F090100A2A30F /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				3A1D572B261F090100A2A30F /* Shared.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		3A1D5729261F090100A2A30F /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA16A102609E29A0084546C /* WWYS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWYS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA16A132609E29A0084546C /* WWYSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWYSApp.swift; sourceTree = "<group>"; };
 		3AA16A172609E29A0084546C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,27 +26,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A1D572A261F090100A2A30F /* Shared.framework in Frameworks */,
+				3A86445D261F3C2B00879CB7 /* Shared in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A1D56FE261EF6BD00A2A30F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3A1D5729261F090100A2A30F /* Shared.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		3AA16A072609E29A0084546C = {
 			isa = PBXGroup;
 			children = (
 				3AA16A122609E29A0084546C /* App */,
 				3AA16A112609E29A0084546C /* Products */,
-				3A1D56FE261EF6BD00A2A30F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,13 +78,15 @@
 				3AA16A0C2609E29A0084546C /* Sources */,
 				3AA16A0D2609E29A0084546C /* Frameworks */,
 				3AA16A0E2609E29A0084546C /* Resources */,
-				3A1D572C261F090100A2A30F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = WWYS;
+			packageProductDependencies = (
+				3A86445C261F3C2B00879CB7 /* Shared */,
+			);
 			productName = WWYS;
 			productReference = 3AA16A102609E29A0084546C /* WWYS.app */;
 			productType = "com.apple.product-type.application";
@@ -295,7 +272,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
 				DEVELOPMENT_TEAM = KR9D699PKJ;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = WWYS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -317,7 +294,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
 				DEVELOPMENT_TEAM = KR9D699PKJ;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = WWYS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -352,6 +329,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3A86445C261F3C2B00879CB7 /* Shared */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Shared;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3AA16A082609E29A0084546C /* Project object */;
 }

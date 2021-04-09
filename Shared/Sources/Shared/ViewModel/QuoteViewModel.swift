@@ -8,18 +8,19 @@
 import Foundation
 import Combine
 
-class ViewModel: ObservableObject {
-    
+public final class QuoteViewModel: ObservableObject {
+
     @Published var result: Quote?
     
+    let networking = QuoteUpdate()
     let taps = PassthroughSubject<Void, Never>()
-    
     var subscriptions = Set<AnyCancellable>()
     
-    init() {
+    public init() {
         taps
-            .map { result in loadData() }
+            .map { result in self.networking.loadData() }
             .switchToLatest()
+            .print("epic")
             .assign(to: \.result, on: self)
             .store(in: &subscriptions)
     }

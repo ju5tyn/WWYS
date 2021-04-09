@@ -8,12 +8,14 @@
 import SwiftUI
 import Shared
 
-
 @main
 struct WWYSApp: App {
+    
+    let viewModel = QuoteViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: viewModel)
         }
     }
 }
