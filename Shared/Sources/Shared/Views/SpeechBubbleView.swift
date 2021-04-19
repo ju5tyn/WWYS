@@ -7,20 +7,27 @@
 
 import SwiftUI
 
-struct SpeechBubbleView: View {
+public struct SpeechBubbleView: View {
+    
+    public init(_ text: String){
+        self.text = text
+    }
     
     var text: String
     
-    var body: some View {
+    public var body: some View {
         Text(text)
+            
             .bold()
             .padding(10)
             .foregroundColor(.black)
+            .minimumScaleFactor(0.2)
             .background(
+                
                 Rectangle()
                     .fill(Color.white)
                     .cornerRadius(10)
-                    .shadow(radius: 4, x: 0, y: 3)
+                    .shadow(color: Color.black.opacity(0.15), radius: 4, x: 0, y: 3)
     
             )
             .animation(.easeInOut(duration: 0.2))
@@ -32,7 +39,7 @@ struct SpeechBubbleView: View {
 
 struct SpeechBubbleView_Previews: PreviewProvider {
     static var previews: some View {
-        SpeechBubbleView(text: "Lorem Ipsum")
+        SpeechBubbleView("Lorem Ipsum")
             
     }
 }

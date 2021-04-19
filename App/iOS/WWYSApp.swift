@@ -11,11 +11,9 @@ import Shared
 @main
 struct WWYSApp: App {
     
-    let viewModel = QuoteViewModel()
-    
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: viewModel)
+            ContentView()
         }
     }
 }

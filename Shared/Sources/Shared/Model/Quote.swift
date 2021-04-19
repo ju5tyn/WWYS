@@ -7,6 +7,6 @@
 
 import Foundation
 
-public struct Quote: Codable {
-    var quote: String
+public struct Quote: Codable, Hashable {
+    public var quote: String
 }

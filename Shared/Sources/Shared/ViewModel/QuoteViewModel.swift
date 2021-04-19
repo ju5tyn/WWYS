@@ -8,24 +8,36 @@
 import Foundation
 import Combine
 
-public final class QuoteViewModel: ObservableObject {
+public class QuoteViewModel: ObservableObject {
 
-    @Published var result: Quote?
+    public init(quoteStore: QuoteStore?) {
+        self.quoteStore = quoteStore
+        
+        taps
+            .map { result in self.networking.loadData() }
+            .switchToLatest()
+            .sink(receiveValue: { (result) in
+                if quoteStore == nil{
+                    self.result = result
+                }else{
+                    self.quoteStore?.quoteArr.append(result)
+                }
+                
+            })
+            //.assign(to: \.result, on: self)
+            .store(in: &subscriptions)
+            
+
+    }
+    
+    @Published public var result: Quote?
+    @Published public var quoteStore: QuoteStore?
     
     let networking = QuoteUpdate()
     let taps = PassthroughSubject<Void, Never>()
     var subscriptions = Set<AnyCancellable>()
     
-    public init() {
-        taps
-            .map { result in self.networking.loadData() }
-            .switchToLatest()
-            .print("epic")
-            .assign(to: \.result, on: self)
-            .store(in: &subscriptions)
-    }
-    
-    func getResult() {
+    public func getResult() {
         taps.send()
     }
     

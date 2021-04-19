@@ -1,11 +1,24 @@
 import SwiftUI
 
-struct YeImage: View {
-    var body: some View {
+public struct YeImage: View {
+    
+    public enum Size: Int {
+        case small = 50
+        case large = 100
+    }
+    
+    public init(_ size: Size){
+        self.size = size
+    }
+    
+    var size: Size
+    
+    public var body: some View {
         Image("ye")
-            
             .resizable()
-            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .frame(width: CGFloat(size.rawValue),
+                   height: CGFloat(size.rawValue),
+                   alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             .shadow(radius: 2)
             .animation(.easeInOut(duration: 0.2))
             
@@ -14,6 +27,6 @@ struct YeImage: View {
 
 struct YeImage_Previews: PreviewProvider {
     static var previews: some View {
-        YeImage()
+        YeImage(.large)
     }
 }
