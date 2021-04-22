@@ -17,7 +17,7 @@ public struct SpeechBubbleView: View {
     
     public var body: some View {
         Text(text)
-            
+            //.font(.custom("Helvetica Neue", size: 15))
             .bold()
             .padding(10)
             .foregroundColor(.black)
@@ -30,10 +30,7 @@ public struct SpeechBubbleView: View {
                     .shadow(color: Color.black.opacity(0.15), radius: 4, x: 0, y: 3)
     
             )
-            .animation(.easeInOut(duration: 0.2))
-            
-            
-            
+            .animation(.easeInOut(duration: 0.2))    
     }
 }
 

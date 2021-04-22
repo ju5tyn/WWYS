@@ -13,23 +13,11 @@ public struct ContentView: View {
                 Spacer()
                 HistoryView(store: self.quoteStore)
                     .padding(.trailing)
-                QuoteView(store: self.quoteStore)
+                YeView(store: self.quoteStore)
                     .padding(.top)
                 Spacer()
                 FooterView()
-                
-                
-                
             }
     }
 }
 
-//private struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Group {
-//            ContentView(viewModel: QuoteViewModel())
-//                .previewDevice("iPhone 11 Pro")
-//
-//        }
-//    }
-//}

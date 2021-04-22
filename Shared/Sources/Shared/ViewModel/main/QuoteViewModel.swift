@@ -20,7 +20,9 @@ public class QuoteViewModel: ObservableObject {
                 if quoteStore == nil{
                     self.result = result
                 }else{
-                    self.quoteStore?.quoteArr.append(result)
+                    if let r = result{
+                        self.quoteStore?.quoteArr.append(r)
+                    }
                 }
                 
             })
